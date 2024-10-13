@@ -369,9 +369,3 @@ gcode:
 [gcode_macro reset]
 gcode:
     RESTART
-    
-[gcode_macro OSVETLENI_INTENZITA]
-description: Jednorázové nastavení intenzity přísvitu v procentech
-gcode:
-    {% set INTENZITY = params.INTENZITY|default(100)|float %}
-    SET_PIN PIN=led_osvetleni VALUE={INTENZITY/100}
